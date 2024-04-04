@@ -95,6 +95,13 @@ Feature: Query execute
       * InsertQuery03 sonuclari dogrulanir
       * Database baglantisi kapatilir.
 
+  @query10
+  Scenario: Database üzerinde "admin_notifications" tablosunda "user id =2 " olan kullanıcıların "id numarası 20 den büyük olanları" doğrulayınız.
+    * Database baglantisi kurulur.
+    * Query10 hazirlanir ve execute edilir.
+    * ResultSet10 sonuclari islenir.
+    * Database baglantisi kapatilir.
+
 
 
 

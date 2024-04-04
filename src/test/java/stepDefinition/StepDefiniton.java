@@ -7,11 +7,7 @@ import org.junit.Assert;
 import utilities.ConfigReader;
 import utilities.JDBCReusableMethods;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.time.LocalDate;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -269,5 +265,22 @@ public class StepDefiniton {
     public void ınsert_query03_sonuclari_dogrulanir() {
         assertEquals(1,rowCount);
     }
+
+    @Given("Query10 hazirlanir ve execute edilir.")
+    public void query10_hazirlanir_ve_execute_edilir() throws SQLException {
+       query=queryManage.getQuery10();
+       resultSet=JDBCReusableMethods.getStatement().executeQuery(query);
+    }
+    @Given("ResultSet10 sonuclari islenir.")
+    public void result_set10_sonuclari_islenir() throws SQLException {
+        for (int i = 0; i <3 ; i++) {
+            resultSet.next();
+        }
+        int actualResult=resultSet.getInt("code");
+
+        assertEquals(1001,actualResult);
+
+    }
+
 
 }

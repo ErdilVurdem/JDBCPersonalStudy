@@ -27,6 +27,12 @@ public class QueryManage {
 
     private String insertQuery03="INSERT INTO u168183796_qaloantec.cron_job_logs (id,cron_job_id,start_at,end_at,duration,error,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?)";
 
+    private String query10="SELECT code FROM u168183796_qaloantec.gateways ORDER BY code DESC LIMIT 5";
+
+    public String getQuery10() {
+        return query10;
+    }
+
     public String getInsertQuery03() {
         return insertQuery03;
     }

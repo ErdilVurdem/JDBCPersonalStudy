@@ -65,16 +65,18 @@ SELECT COUNT(*)toplam_kullanici FROM u168183796_qaloantec.admin_notifications WH
 
 # Database üzerinde "cron_job_logs" tablosuna veri girişi yapıp tabloya eklendiğini doğrulayınız.
 SELECT * FROM u168183796_qaloantec.cron_job_logs;
-INSERT INTO u168183796_qaloantec.cron_job_logs (id,cron_job_id,start_at,end_at,duration,error,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?);]]></console>
+INSERT INTO u168183796_qaloantec.cron_job_logs (id,cron_job_id,start_at,end_at,duration,error,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?);
+
+# "Gateways" tablosunda en yüksek 5 "code" değerini Listeleyiniz.
+SELECT * FROM u168183796_qaloantec.gateways;
+SELECT code FROM u168183796_qaloantec.gateways ORDER BY code DESC LIMIT 5;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="c345affe-03cf-440f-b86d-a19644e7c476" object-ref="consoles/T130" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="c345affe-03cf-440f-b86d-a19644e7c476" />
