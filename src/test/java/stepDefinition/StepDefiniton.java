@@ -277,10 +277,10 @@ public class StepDefiniton {
             resultSet.next();
         }
         int actualResult=resultSet.getInt("code");
-
         assertEquals(1001,actualResult);
-
     }
+
+    //deneme
 
 
 }
